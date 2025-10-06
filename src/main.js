@@ -1,7 +1,7 @@
 // Main entry point for the application
 import { HomePage } from './pages/home.js';
 import { AboutPage } from './pages/about.js';
-// Removed ProjectsPage and ProductControls to match original design
+// Removed ProjectsPage and ProjectControls to match original design
 import { Menu } from './ui-components/Menu.js';
 import { CertificateSlider } from './ui-components/CertificateSlider.js';
 

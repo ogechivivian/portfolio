@@ -4,6 +4,7 @@ export class Menu {
     this.menuToggle = document.querySelector(toggleSelector);
     this.navLinks = document.getElementById(navSelector);
     this.isOpen = false;
+    this.handleResize = this.handleResize.bind(this);
 
     this.init();
   }
@@ -36,6 +37,8 @@ export class Menu {
         this.close();
       }
     });
+
+    window.addEventListener('resize', this.handleResize);
   }
 
   toggle() {
@@ -67,5 +70,11 @@ export class Menu {
   // Method to programmatically close menu
   forceClose() {
     this.close();
+  }
+
+  handleResize() {
+    if (window.innerWidth > 900 && this.isOpen) {
+      this.close();
+    }
   }
 }

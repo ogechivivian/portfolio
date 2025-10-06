@@ -45,7 +45,7 @@ portfolio-project/
     │   ├── about.js      # About page controller
     │   └── projects.js   # Projects page controller
     ├── interactivity/    # Interactive features
-    │   ├── productControls.js # Project filtering/sorting
+    │   ├── projectControls.js # Project filtering/sorting
     │   └── themeToggle.js     # Dark/light theme toggle
     └── main.js           # Application entry point
 ```
@@ -105,7 +105,7 @@ The project uses SCSS with a component-based approach:
 - **ProjectsPage**: Controls project filtering, sorting, and modal displays
 
 ### Interactive Features
-- **ProductControls**: Project filtering and sorting system
+- **ProjectControls**: Project filtering and sorting system
 - **ThemeToggle**: Dark/light mode switching with persistence
 
 ## 🚀 Getting Started

@@ -1,5 +1,5 @@
-// Product controls for project filtering and sorting
-export class ProductControls {
+// Project controls for project filtering and sorting
+export class ProjectControls {
   constructor(containerId) {
     this.container = document.getElementById(containerId);
     this.filters = new Set();
