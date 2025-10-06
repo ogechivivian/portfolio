@@ -1,7 +1,7 @@
 // Main entry point for the application
 import { HomePage } from './pages/home.js';
 import { AboutPage } from './pages/about.js';
-// Removed ProjectsPage and ProjectControls to match original design
+
 import { Menu } from './ui-components/Menu.js';
 import { CertificateSlider } from './ui-components/CertificateSlider.js';
 
@@ -11,7 +11,6 @@ console.log('Main.js loaded successfully');
 class PortfolioApp {
   constructor() {
     this.pages = {};
-    this.controls = null;
     this.menu = null;
     this.init();
   }
@@ -36,7 +35,6 @@ class PortfolioApp {
 
   initializeApp() {
     this.initializePages();
-    this.initializeControls();
     this.initializeMenu();
     this.initializeCertificateSlider();
     this.bindGlobalEvents();
@@ -47,13 +45,8 @@ class PortfolioApp {
     // Initialize all page controllers
     this.pages.home = new HomePage();
     this.pages.about = new AboutPage();
-    // Removed projects page to match original design
   }
 
-  initializeControls() {
-    // Project controls removed to match original design
-    // Can be re-enabled if projects section is added later
-  }
 
 
 
@@ -67,9 +60,6 @@ class PortfolioApp {
     this.certificateSlider = new CertificateSlider();
   }
 
-  bindControlEvents() {
-    // Project control events removed to match original design
-  }
 
   bindGlobalEvents() {
     // Global scroll events

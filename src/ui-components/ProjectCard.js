@@ -30,7 +30,6 @@ export class ProjectCard {
   static bindEvents() {
     document.addEventListener('click', (e) => {
       if (e.target.classList.contains('project-link')) {
-        // Add any custom analytics or tracking here
         console.log('Project link clicked:', e.target.href);
       }
     });

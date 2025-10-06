@@ -40,8 +40,6 @@ export class Navbar {
             });
           }
         }
-        // For external links (like ./index.html, ./projects.html), let the browser handle navigation normally
-        // This includes relative paths and absolute URLs
       }
     });
   }

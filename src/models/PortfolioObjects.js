@@ -1,6 +1,6 @@
-// Core OOUX Objects for Multimedia Design Portfolio
+// Core OOUX Objects for Portfolio
 
-// 1. Project Object
+// Project Object
 export class Project {
   constructor(id, title, category, description, images, tools, timeline, process, results) {
     this.id = id;
@@ -42,7 +42,7 @@ export class Project {
   }
 }
 
-// 2. CaseStudy Object
+// CaseStudy Object
 export class CaseStudy {
   constructor(id, title, client, overview, challenge, solution, process, results, images) {
     this.id = id;
@@ -118,7 +118,7 @@ export class ProcessStep {
   }
 }
 
-// 4. Skill Object
+// Skill Object
 export class Skill {
   constructor(name, category, proficiency, projects, description) {
     this.name = name;
@@ -141,7 +141,7 @@ export class Skill {
   }
 }
 
-// 5. CV Object
+// CV Object
 export class CV {
   constructor(personalInfo, experience, education, skills, projects, awards) {
     this.personalInfo = personalInfo;
@@ -171,7 +171,7 @@ export class CV {
   }
 }
 
-// 6. Portfolio Object (Main container)
+// Portfolio Object (Main container)
 export class Portfolio {
   constructor() {
     this.projects = [];

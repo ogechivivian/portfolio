@@ -66,12 +66,6 @@ export class Menu {
     document.body.classList.remove("menu-open");
     this.isOpen = false;
   }
-
-  // Method to programmatically close menu
-  forceClose() {
-    this.close();
-  }
-
   handleResize() {
     if (window.innerWidth > 900 && this.isOpen) {
       this.close();
