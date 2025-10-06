@@ -12,8 +12,12 @@ export class CertificateSlider {
   }
 
   init() {
-    if (!this.track) return;
+    if (!this.track) {
+      console.error('Certificate slider track not found');
+      return;
+    }
     
+    console.log('Certificate slider initialized successfully');
     this.createDots();
     this.bindEvents();
     this.updateSlider();
@@ -34,12 +38,29 @@ export class CertificateSlider {
 
   bindEvents() {
     if (this.prevBtn) {
-      this.prevBtn.addEventListener('click', () => this.prevSlide());
+      this.prevBtn.addEventListener('click', () => {
+        console.log('Previous button clicked');
+        this.prevSlide();
+      });
     }
     
     if (this.nextBtn) {
-      this.nextBtn.addEventListener('click', () => this.nextSlide());
+      this.nextBtn.addEventListener('click', () => {
+        console.log('Next button clicked');
+        this.nextSlide();
+      });
     }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        this.prevSlide();
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        this.nextSlide();
+      }
+    });
 
     // Touch/swipe support
     let startX = 0;
@@ -51,15 +72,17 @@ export class CertificateSlider {
 
     this.track.addEventListener('touchend', (e) => {
       endX = e.changedTouches[0].clientX;
-      this.handleSwipe();
+      this.handleSwipe(startX, endX);
     });
 
-    // Mouse drag support
+    // Mouse drag support for desktop
     let isDragging = false;
+    let mouseStartX = 0;
     
     this.track.addEventListener('mousedown', (e) => {
       isDragging = true;
-      startX = e.clientX;
+      mouseStartX = e.clientX;
+      this.track.style.cursor = 'grabbing';
     });
 
     this.track.addEventListener('mousemove', (e) => {
@@ -70,16 +93,33 @@ export class CertificateSlider {
     this.track.addEventListener('mouseup', (e) => {
       if (!isDragging) return;
       isDragging = false;
-      endX = e.clientX;
-      this.handleSwipe();
+      this.track.style.cursor = 'grab';
+      const mouseEndX = e.clientX;
+      this.handleSwipe(mouseStartX, mouseEndX);
     });
 
     this.track.addEventListener('mouseleave', () => {
-      isDragging = false;
+      if (isDragging) {
+        isDragging = false;
+        this.track.style.cursor = 'grab';
+      }
+    });
+
+    // Set initial cursor
+    this.track.style.cursor = 'grab';
+
+    // Wheel/scroll support for desktop
+    this.track.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      if (e.deltaX > 0 || e.deltaY > 0) {
+        this.nextSlide();
+      } else if (e.deltaX < 0 || e.deltaY < 0) {
+        this.prevSlide();
+      }
     });
   }
 
-  handleSwipe() {
+  handleSwipe(startX, endX) {
     const threshold = 50;
     const diff = startX - endX;
 
@@ -114,11 +154,15 @@ export class CertificateSlider {
     const translateX = -this.currentSlide * 20; // 20% per slide
     this.track.style.transform = `translateX(${translateX}%)`;
     
+    console.log(`Sliding to position ${this.currentSlide}, translateX: ${translateX}%`);
+    
     // Update dots
-    const dots = this.dotsContainer.querySelectorAll('.dot');
-    dots.forEach((dot, index) => {
-      dot.classList.toggle('active', index === this.currentSlide);
-    });
+    const dots = this.dotsContainer?.querySelectorAll('.dot');
+    if (dots) {
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === this.currentSlide);
+      });
+    }
     
     // Update button states
     if (this.prevBtn) {

@@ -780,6 +780,11 @@ header .menu-toggle {
   display: flex;
   transition: transform 0.5s ease-in-out;
   width: 500%; /* 5 slides = 500% */
+  cursor: grab;
+}
+
+.slider-track:active {
+  cursor: grabbing;
 }
 
 .cert-slide {
@@ -809,11 +814,17 @@ header .menu-toggle {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .slider-btn:hover {
   background: rgba(79, 70, 229, 1);
   transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
+}
+
+.slider-btn:active {
+  transform: scale(0.95);
 }
 
 .slider-btn:disabled {
