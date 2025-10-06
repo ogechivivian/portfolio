@@ -36,12 +36,24 @@ export class CertificateSlider {
   }
 
   getSlidesPerView() {
-    const styles = window.getComputedStyle(this.sliderRoot);
-    const value = parseInt(styles.getPropertyValue('--slides-per-view'), 10);
-    if (Number.isNaN(value) || value < 1) {
-      return 1;
+    const width = window.innerWidth;
+
+    let fallbackValue = 3;
+    if (width <= 640) {
+      fallbackValue = 1;
+    } else if (width <= 1024) {
+      fallbackValue = 2;
     }
-    return Math.min(value, this.totalSlides);
+
+    if (!this.sliderRoot) {
+      return Math.min(fallbackValue, this.totalSlides);
+    }
+
+    const styles = window.getComputedStyle(this.sliderRoot);
+    const cssValue = parseInt(styles.getPropertyValue('--slides-per-view'), 10);
+
+    const resolvedValue = Number.isNaN(cssValue) || cssValue < 1 ? fallbackValue : cssValue;
+    return Math.min(resolvedValue, this.totalSlides);
   }
 
   updateResponsiveSettings(force = false) {
@@ -56,6 +68,10 @@ export class CertificateSlider {
     this.slidesPerView = newSlidesPerView;
     this.maxIndex = Math.max(0, this.totalSlides - this.slidesPerView);
     this.currentSlide = Math.min(this.currentSlide, this.maxIndex);
+
+    if (this.sliderRoot) {
+      this.sliderRoot.style.setProperty('--slides-per-view', this.slidesPerView);
+    }
 
     const basis = 100 / this.slidesPerView;
     this.slides.forEach((slide) => {
