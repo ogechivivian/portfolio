@@ -2,21 +2,30 @@
 export const projects = [
   {
     id: 1,
-    title: "Cloud Infrastructure Automation",
-    description: "Automated cloud infrastructure deployment using Terraform and AWS",
-    technologies: ["AWS", "Terraform", "Docker", "Jenkins"],
-    image: "./assets/images/project1.jpg",
-    githubUrl: "https://github.com/yourusername/project1",
-    liveUrl: "https://project1.com"
+    title: "Kubernetes Cluster Monitoring",
+    description: "Comprehensive Kubernetes cluster monitoring dashboard using Grafana. Real-time monitoring of node health, pod status, resource utilization, and container performance metrics.",
+    technologies: ["Kubernetes", "Grafana", "Prometheus", "Docker", "Monitoring"],
+    image: "./assets/images/projects/kubernetes-monitoring-dashboard.png",
+    githubUrl: "#",
+    liveUrl: "#",
+    metrics: {
+      nodes: "6 Active Nodes",
+      pods: "270+ Running Pods", 
+      uptime: "100% Node Ready"
+    }
   },
   {
     id: 2,
-    title: "CI/CD Pipeline Implementation",
-    description: "Implemented comprehensive CI/CD pipeline for microservices architecture",
-    technologies: ["Jenkins", "Docker", "Kubernetes", "Git"],
-    image: "./assets/images/project2.jpg",
-    githubUrl: "https://github.com/yourusername/project2",
-    liveUrl: "https://project2.com"
-  },
-  // Add more projects as needed
+    title: "CI/CD Pipeline Automation",
+    description: "Advanced CI/CD pipeline implementation with automated build, test, deploy, and artifact management. Includes Docker containerization, secret management, and Artifactory integration.",
+    technologies: ["Jenkins", "Docker", "Artifactory", "Build Automation", "DevOps"],
+    image: "./assets/images/projects/cicd-pipeline-dashboard.png",
+    githubUrl: "#",
+    liveUrl: "#",
+    metrics: {
+      stages: "15+ Pipeline Stages",
+      automation: "Fully Automated",
+      runtime: "2m 5s Build Time"
+    }
+  }
 ];

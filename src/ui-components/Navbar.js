@@ -4,30 +4,8 @@ import { navItems } from '../data/navItems.js';
 export class Navbar {
   constructor(containerId = 'navLinks') {
     this.container = document.getElementById(containerId);
-    this.navItems = this.getNavItemsForCurrentPage();
+    this.navItems = navItems;
     this.init();
-  }
-
-  getNavItemsForCurrentPage() {
-    const currentPage = window.location.pathname;
-    
-    // If we're on the projects page, modify links to point back to home page sections
-    if (currentPage.includes('projects.html')) {
-      return navItems.map(item => {
-        // For hash links (sections), point them to index.html with the hash
-        if (item.href.startsWith('#')) {
-          return {
-            ...item,
-            href: `./index.html${item.href}`
-          };
-        }
-        // Keep other links as they are
-        return item;
-      });
-    }
-    
-    // For home page, use the default navigation
-    return navItems;
   }
 
   init() {
@@ -38,15 +16,8 @@ export class Navbar {
   render() {
     if (!this.container) return;
     
-    const currentPage = window.location.pathname;
-    
     this.container.innerHTML = this.navItems
-      .map(item => {
-        // Mark Projects as active when on projects.html
-        const isActive = currentPage.includes('projects.html') && item.id === 'projects';
-        const activeClass = isActive ? ' class="active"' : '';
-        return `<a href="${item.href}"${activeClass}>${item.label}</a>`;
-      })
+      .map(item => `<a href="${item.href}">${item.label}</a>`)
       .join('');
   }
 

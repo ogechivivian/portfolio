@@ -272,6 +272,57 @@ header .menu-toggle {
     font-size: 13px;
   }
   
+  /* Projects mobile styles */
+  .projects-section {
+    padding: 50px 15px;
+  }
+  
+  .projects-head {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 10px;
+  }
+  
+  .project-card {
+    max-width: 100%;
+  }
+  
+  .project-image {
+    height: 200px;
+  }
+  
+  .project-info {
+    padding: 20px;
+  }
+  
+  .project-info h3 {
+    font-size: 20px;
+  }
+  
+  .project-desc {
+    font-size: 14px;
+  }
+  
+  .project-metrics {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .metric {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .metric-value {
+    font-size: 18px;
+  }
+  
   /* Footer mobile styles */
   .footer-banner {
     padding: 40px 15px;
@@ -476,6 +527,119 @@ header .menu-toggle {
   flex-direction: column;
   align-items: flex-start;
   padding-bottom: 25px;
+}
+
+/* Projects Section */
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.8));
+}
+
+.projects-section .projects-head {
+  font-size: 38px;
+  font-weight: 600;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background: rgba(30, 41, 59, 0.7);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(79, 70, 229, 0.2);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(79, 70, 229, 0.3);
+}
+
+.project-image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+.project-info {
+  padding: 30px;
+}
+
+.project-info h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #4f46e5;
+}
+
+.project-desc {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #cbd5e1;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.tech-tag {
+  background: rgba(79, 70, 229, 0.2);
+  color: #a78bfa;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.project-metrics {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.metric {
+  text-align: center;
+}
+
+.metric-value {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  color: #4f46e5;
+}
+
+.metric-label {
+  font-size: 12px;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .certificate-section {
