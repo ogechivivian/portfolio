@@ -3,6 +3,7 @@ import { HomePage } from './pages/home.js';
 import { AboutPage } from './pages/about.js';
 // Removed ProjectsPage and ProductControls to match original design
 import { Menu } from './ui-components/Menu.js';
+import { CertificateSlider } from './ui-components/CertificateSlider.js';
 
 // Debug logging
 console.log('Main.js loaded successfully');
@@ -37,6 +38,7 @@ class PortfolioApp {
     this.initializePages();
     this.initializeControls();
     this.initializeMenu();
+    this.initializeCertificateSlider();
     this.bindGlobalEvents();
     console.log('Portfolio app initialized successfully!');
   }
@@ -58,6 +60,11 @@ class PortfolioApp {
   initializeMenu() {
     // Initialize mobile menu
     this.menu = new Menu('.menu-toggle', 'navLinks');
+  }
+
+  initializeCertificateSlider() {
+    // Initialize certificate slider
+    this.certificateSlider = new CertificateSlider();
   }
 
   bindControlEvents() {

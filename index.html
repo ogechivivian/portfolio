@@ -93,61 +93,82 @@
       </a>
     </div>
     
-    <!-- Professional Certification Grid -->
-    <div class="certifications-grid" role="list" aria-label="Professional certifications">
-      <div class="cert-card">
-        <div class="cert-badge">
-          <img src="https://images.credly.com/images/c3ab66f8-5d59-4afa-a6c2-0ba30a1989ca/CERT-Expert-DevOps-Engineer-600x600.png" alt="Microsoft DevOps Engineer Expert Badge">
-        </div>
-        <div class="cert-info">
-          <h3>Microsoft Certified</h3>
-          <p class="cert-title">DevOps Engineer Expert</p>
-          <p class="cert-desc">Expert-level Azure DevOps solutions and automation</p>
+    <!-- Professional Certification Slider -->
+    <div class="certifications-slider" role="region" aria-label="Professional certifications carousel">
+      <div class="slider-container">
+        <div class="slider-track" id="cert-slider-track">
+          <div class="cert-slide">
+            <div class="cert-card">
+              <div class="cert-badge">
+                <img src="https://images.credly.com/images/c3ab66f8-5d59-4afa-a6c2-0ba30a1989ca/CERT-Expert-DevOps-Engineer-600x600.png" alt="Microsoft DevOps Engineer Expert Badge">
+              </div>
+              <div class="cert-info">
+                <h3>Microsoft Certified</h3>
+                <p class="cert-title">DevOps Engineer Expert</p>
+                <p class="cert-desc">Expert-level Azure DevOps solutions and automation</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="cert-slide">
+            <div class="cert-card">
+              <div class="cert-badge">
+                <img src="https://images.credly.com/images/107e2eb6-f394-40eb-83d2-d8c9b7d34555/exam-az400-600x600.png" alt="Azure DevOps AZ-400 Badge">
+              </div>
+              <div class="cert-info">
+                <h3>Microsoft AZ-400</h3>
+                <p class="cert-title">Designing & Implementing DevOps Solutions</p>
+                <p class="cert-desc">CI/CD pipelines and infrastructure as code</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="cert-slide">
+            <div class="cert-card">
+              <div class="cert-badge">
+                <img src="https://images.credly.com/images/231a1984-5939-4912-920e-5023e3c98682/AppDynamics-Verified_Core-APM.png" alt="AppDynamics APM Badge">
+              </div>
+              <div class="cert-info">
+                <h3>AppDynamics</h3>
+                <p class="cert-title">Verified Core APM</p>
+                <p class="cert-desc">Application performance monitoring and optimization</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="cert-slide">
+            <div class="cert-card">
+              <div class="cert-badge">
+                <img src="https://images.credly.com/images/be8fcaeb-c769-4858-b567-ffaaa73ce8cf/image.png" alt="Lean Six Sigma Badge">
+              </div>
+              <div class="cert-info">
+                <h3>Lean Six Sigma</h3>
+                <p class="cert-title">Yellow Belt Certification</p>
+                <p class="cert-desc">Process improvement and operational excellence</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="cert-slide">
+            <div class="cert-card">
+              <div class="cert-badge">
+                <img src="https://images.credly.com/images/336eebfc-0ac3-4553-9a67-b402f491f185/azure-administrator-associate-600x600.png" alt="Microsoft Azure Administrator Badge">
+              </div>
+              <div class="cert-info">
+                <h3>Microsoft Certified</h3>
+                <p class="cert-title">Azure Administrator Associate</p>
+                <p class="cert-desc">Azure infrastructure and resource management</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="cert-card">
-        <div class="cert-badge">
-          <img src="https://images.credly.com/images/107e2eb6-f394-40eb-83d2-d8c9b7d34555/exam-az400-600x600.png" alt="Azure DevOps AZ-400 Badge">
-        </div>
-        <div class="cert-info">
-          <h3>Microsoft AZ-400</h3>
-          <p class="cert-title">Designing & Implementing DevOps Solutions</p>
-          <p class="cert-desc">CI/CD pipelines and infrastructure as code</p>
-        </div>
-      </div>
-
-      <div class="cert-card">
-        <div class="cert-badge">
-          <img src="https://images.credly.com/images/231a1984-5939-4912-920e-5023e3c98682/AppDynamics-Verified_Core-APM.png" alt="AppDynamics APM Badge">
-        </div>
-        <div class="cert-info">
-          <h3>AppDynamics</h3>
-          <p class="cert-title">Verified Core APM</p>
-          <p class="cert-desc">Application performance monitoring and optimization</p>
-        </div>
-      </div>
-
-      <div class="cert-card">
-        <div class="cert-badge">
-          <img src="https://images.credly.com/images/be8fcaeb-c769-4858-b567-ffaaa73ce8cf/image.png" alt="Lean Six Sigma Badge">
-        </div>
-        <div class="cert-info">
-          <h3>Lean Six Sigma</h3>
-          <p class="cert-title">Yellow Belt Certification</p>
-          <p class="cert-desc">Process improvement and operational excellence</p>
-        </div>
-      </div>
-
-      <div class="cert-card">
-        <div class="cert-badge">
-          <img src="https://images.credly.com/images/336eebfc-0ac3-4553-9a67-b402f491f185/azure-administrator-associate-600x600.png" alt="Microsoft Azure Administrator Badge">
-        </div>
-        <div class="cert-info">
-          <h3>Microsoft Certified</h3>
-          <p class="cert-title">Azure Administrator Associate</p>
-          <p class="cert-desc">Azure infrastructure and resource management</p>
-        </div>
+      
+      <!-- Navigation Controls -->
+      <div class="slider-controls">
+        <button class="slider-btn prev-btn" id="cert-prev" aria-label="Previous certification">‹</button>
+        <div class="slider-dots" id="cert-dots"></div>
+        <button class="slider-btn next-btn" id="cert-next" aria-label="Next certification">›</button>
       </div>
     </div>
   </section>
