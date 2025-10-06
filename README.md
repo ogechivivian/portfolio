@@ -2,6 +2,10 @@
 
 A modern, responsive portfolio website showcasing DevOps, Cloud Computing, and Site Reliability Engineering expertise.
 
+🌐 **Live Site:** https://ogechivivian.github.io/portfolio/
+
+![Portfolio Preview](https://img.shields.io/badge/Status-Live-brightgreen)
+
 ## 🏗️ Project Structure
 
 This project follows a modular, scalable architecture based on modern web development best practices:
