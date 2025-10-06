@@ -607,6 +607,23 @@ header .menu-toggle {
   text-align: center;
 }
 
+.placeholder-note {
+  color: #64748b;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+.placeholder-note code {
+  background: rgba(79, 70, 229, 0.1);
+  color: #a78bfa;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+}
+
 .project-info {
   padding: 30px;
 }
