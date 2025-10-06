@@ -144,8 +144,153 @@ header .menu-toggle {
   .home-section {
     flex-direction: column;
     text-align: center;
-    margin-top: 5%;
+    margin-top: 15%;
+    padding: 0 15px;
     gap: 20px;
+  }
+  
+  .home-section .home-text {
+    margin: 5% 0;
+    align-items: center;
+  }
+  
+  .home-section .home-text h1 {
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+  
+  .home-section .home-text .home-info {
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: center;
+  }
+  
+  .home-section .home-img {
+    margin: 0;
+  }
+  
+  .home-section .home-img .home-icon img {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .download-cv-btn {
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+  
+  /* About section mobile styles */
+  .about-me {
+    margin: 50px 0;
+    padding: 0 15px;
+  }
+  
+  .about-me .about-head {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .about-me .about-content {
+    padding: 0 10px;
+  }
+  
+  .about-text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .about-highlights {
+    gap: 15px;
+  }
+  
+  .highlight-item {
+    padding: 15px;
+    font-size: 14px;
+  }
+  
+  .highlight-icon {
+    font-size: 20px;
+  }
+  
+  /* Certifications mobile styles */
+  .certificate-section {
+    padding: 0 15px;
+  }
+  
+  .cert-head {
+    font-size: 28px;
+  }
+  
+  .certifications-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 10px;
+  }
+  
+  .cert-card {
+    padding: 20px;
+  }
+  
+  .cert-badge img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  /* Skills section mobile styles */
+  .skill-section {
+    padding: 50px 15px;
+  }
+  
+  .skill-class {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .skill-group {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 10px;
+  }
+  
+  .skill-card {
+    padding: 25px;
+  }
+  
+  .skill-card h3 {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+  
+  .skill-desc {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .skill-list {
+    font-size: 13px;
+  }
+  
+  /* Footer mobile styles */
+  .footer-banner {
+    padding: 40px 15px;
+  }
+  
+  .footer-cont {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .footer-text {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .footer-text img {
+    width: 30px;
+    height: 30px;
   }
 }
 .home-section .home-text {
@@ -757,8 +902,43 @@ header .menu-toggle {
     font-size: 20px;
   }
   .footer-banner .footer-cont {
-    flex-direction: row;
-    gap: 50px;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+  .home-section .home-text h1 {
+    font-size: 24px;
+  }
+  
+  .home-section .home-text .home-info {
+    font-size: 13px;
+  }
+  
+  .home-section .home-img .home-icon img {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .about-me .about-head {
+    font-size: 24px;
+  }
+  
+  .cert-head, .skill-class {
+    font-size: 24px;
+  }
+  
+  .about-highlights {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 15px;
+  }
+  
+  .highlight-item {
+    padding: 10px;
+    font-size: 13px;
   }
 }
 
